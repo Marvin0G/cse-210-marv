@@ -1,9 +1,28 @@
-using System;
+using System.Collections.Generic;
+using System.Reflection.Metadata;
+Console.WriteLine("welcome to my numbers program ");
 
-class Program
+Console.WriteLine("Enter a list of numbers, type 0 when finished. ");
+
+string numbers = Console.ReadLine();
+
+int number = int.Parse(numbers);
+
+
+List<int> numberlist;
+numberlist = new List<int>();
+
+numberlist.Add(number);
+
+while (number != 0)
 {
-    static void Main(string[] args)
+    if (number != 0)
     {
-        Console.WriteLine("Hello World! This is the Exercise4 Project.");
+        Console.WriteLine("Enter number");
+        number = int.Parse(Console.ReadLine());
+        numberlist.Add(number);
+
+
+
     }
 }
