@@ -22,8 +22,9 @@ do
         Console.WriteLine("please input your number");
         number = int.Parse(Console.ReadLine());
         numberlist.Add(number);
-
-
-
     }
-}
+    
+} while (number != 0);
+
+    int total = numberlist.Sum();
+    Console.WriteLine($"the sum of all numbers is {total}");
