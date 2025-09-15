@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using SCollctions.Generic;
 using System.Reflection.Metadata;
 using System.Linq;
 Console.WriteLine("welcome to my numbers program ");
@@ -22,9 +22,8 @@ do
         Console.WriteLine("please input your number");
         number = int.Parse(Console.ReadLine());
         numberlist.Add(number);
-    }
-    
-} while (number != 0);
 
-    int total = numberlist.Sum();
-    Console.WriteLine($"the sum of all numbers is {total}");
+
+
+    }
+}
