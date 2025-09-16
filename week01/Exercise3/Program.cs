@@ -39,3 +39,4 @@ while (number != magicnumber)
     }
 }
 Console.WriteLine($"you guessed {guesscount} times");
+
