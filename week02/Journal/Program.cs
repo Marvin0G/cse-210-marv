@@ -1,46 +1,43 @@
 using System;
-
-static void Main(string[] args)
+using System.Formats.Tar;
+public class program
+{
+    static void Main(string[] args)
 {
     Console.WriteLine("Hello World! This \n is the journal Project.");
     Console.WriteLine("what would you like to do");
     Console.WriteLine("1. write");
-    Console.WriteLine("1. Display");
-    Console.WriteLine("1. Load");
-    Console.WriteLine("1. Save");
-    Console.WriteLine("1. Quit");
+    Console.WriteLine("2. Display");
+    Console.WriteLine("3. Load");
+    Console.WriteLine("4. Save");
+    Console.WriteLine("5. Quit");
     string selectedoption = Console.ReadLine();
     int selectednumber = int.Parse(selectedoption);
     string placeholdertext = "";
-    if (selectednumber == 1)
-    {
-        journal.addentry(placeholdertext);
-    }
-    //     if else (selectednumber == 1)
+    // if (selectednumber == 1)
     // {
     //     journal.addentry(placeholdertext);
     // }
-
+    // //     if else (selectednumber == 1)
+    // // {
+    // //     journal.addentry(placeholdertext);
+    // // }
 
 
 
 }
+}
+
     
 
-    static void hello()
-{
-    Console.WriteLine("Hello World! This is the done Project.");
-}
 
-
-hello();
 
 
 
 
 public class Entry
 {
-    public int date;
+    public string date;
     public string prompt;
     public string response;
 
@@ -56,14 +53,18 @@ public class Entry
 
 public class journal
 {
-    public static void addentry(string entry)
+    private List<Entry> entries = new List<Entry>();
+    public void addentry(Entry entry)
     {
-
+        entries.Add(entry);
     }
 
-    public static void displayall()
+    public void displayall()
     {
-
+        foreach (var entry in entries)
+        {
+            Console.WriteLine($"{entry.date} - {entry.prompt} \n {entry.response} ");
+        }
     }
 
     public static void savetofile(string filename)
