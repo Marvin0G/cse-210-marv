@@ -1,28 +1,25 @@
 using System;
 using System.Formats.Tar;
+using System.Collections.Generic; 
+
 public class Program
 {
     static void Main(string[] args)
-{
-    Console.WriteLine("Hello World! This \n is the journal Project.");
-    Console.WriteLine("what would you like to do");
-    Console.WriteLine("1. write");
-    Console.WriteLine("2. Display");
-    Console.WriteLine("3. Load");
-    Console.WriteLine("4. Save");
-    Console.WriteLine("5. Quit");
-    string selectedoption = Console.ReadLine();
-    int selectednumber = int.Parse(selectedoption);
-    // string placeholdertext = "";
-    // if (selectednumber == 1)
-    // {
-    //     journal.addentry(placeholdertext);
-    // }
-    // //     if else (selectednumber == 1)
-    // // {
-    // //     journal.addentry(placeholdertext);
-    // // }
+    {
+        Console.WriteLine("Hello World! This \n is the journal Project.");
+        Console.WriteLine("what would you like to do");
+        Console.WriteLine("1. write");
+        Console.WriteLine("2. Display");
+        Console.WriteLine("3. Load");
+        Console.WriteLine("4. Save");
+        Console.WriteLine("5. Quit");
+        string selectedoption = Console.ReadLine();
+        int selectednumber = int.Parse(selectedoption);
+        if (selectednumber == 1)
+        {
+            Console.WriteLine("You chose to write an entry!");
 
+        }
 
 
 }
