@@ -1,6 +1,6 @@
 using System;
 using System.Formats.Tar;
-public class program
+public class Program
 {
     static void Main(string[] args)
 {
@@ -13,7 +13,7 @@ public class program
     Console.WriteLine("5. Quit");
     string selectedoption = Console.ReadLine();
     int selectednumber = int.Parse(selectedoption);
-    string placeholdertext = "";
+    // string placeholdertext = "";
     // if (selectednumber == 1)
     // {
     //     journal.addentry(placeholdertext);
@@ -51,7 +51,7 @@ public class Entry
 
 
 
-public class journal
+public class Journal
 {
     private List<Entry> entries = new List<Entry>();
     public void addentry(Entry entry)
@@ -80,11 +80,20 @@ public class journal
 }
 
 
-public class promptgenerator
+public class Promptgenerator
 {
-    public static void getrandomprompt()
+    private List<string> prompt = new List<string>()
     {
+        "what made you smile today?",
+        "whats something you learned today?",
+        "How did you see God's hand in your life today?"
 
+    };
+    private Random random = new Random();
+    public string getrandomprompt()
+    {
+        int index = random.Next(prompt.Count);
+        return prompt[index];
     }
 }
 
