@@ -51,6 +51,7 @@ public class Program
             else if (selectednumber == 5)
             {
                 Console.WriteLine("Goodbye");
+                break;
             }
         }
 
